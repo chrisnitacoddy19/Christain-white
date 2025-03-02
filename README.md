@@ -1,4 +1,4 @@
- Overview 
+Overview 
 
 This repository contains the source code for a simple calculator application built using Java Swing. The application allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, division, and modulus, with an easy-to-use graphical user interface (GUI). 
 
@@ -30,19 +30,19 @@ This project was developed and contributed to by a group of 10 individuals, each
 
 Group Members and Their Contributions: 
 
-Nureni olamilekan U23MTE1059 (Project Manager/developer) 
+1.) ChristainU23MTE1059 (Project Manager) 
 
 Managed the overall project, coordinated tasks, and ensured timely delivery. 
 
 Set up the project structure and organized team meetings. 
 
-Charles U23MTE1063(UI/UX Designer) 
+2.) Charles U23MTE1063(UI/UX Designer) 
 
 Designed the graphical user interface (GUI), ensuring a simple and user-friendly layout. 
 
 Focused on button positioning, color schemes, and text field design to enhance the user experience. 
 
-Shalom Asuelimen U23EEE1003(Lead Developer) 
+3.) Shalom Asuelimen U23EEE1003(Lead Developer) 
 
 Led the development of the main logic behind the calculator's functionality. 
 
@@ -50,37 +50,37 @@ Implemented the core arithmetic operations, handling the event-driven architectu
 
 Integrated error handling for division by zero and modulus by zero. 
 
- Amos Benjamin U23EEE1032(Java Swing Specialist) 
+4.)  Amos Benjamin U23EEE1032(Java Swing Specialist) 
 
 Focused on using Java Swing components like JFrame, JButton, and JTextField to construct the application. 
 
 Ensured that the application maintained cross-platform compatibility and provided a smooth experience on all supported operating systems. 
 
-Alhassan Godwin Ojochegbe U23EEE1030 (Backend Developer) 
+5.) Alhassan Godwin Ojochegbe U23EEE1030 (Backend Developer) 
 
 Contributed to the backend logic, ensuring accurate calculation of arithmetic operations. 
 
 Worked on implementing the mathematical functions and optimizing the calculation flow. 
 
- Muhammad Muazu U23MTE1056 (Testing Lead) 
+ 6.) Muhammad Muazu U23MTE1056 (Testing Lead) 
 
 Developed and executed test cases to ensure that all arithmetic operations worked as expected. 
 
 Conducted unit tests and integration tests, focusing on edge cases like division by zero and clearing input. 
 
- Oyeniyi Hussainah U23MTE1061 (Documentation Specialist) 
+7. )  Oyeniyi Hussainah U23MTE1061 (Documentation Specialist) 
 
 Created the project documentation, including the README file and user manual. 
 
 Ensured that the documentation was clear and easy to follow for future developers and users. 
 
- Sashe Gorman U23MTE1054 (Quality Assurance) 
+8.) Sashe Gorman U23MTE1054 (Quality Assurance) 
 
 Assisted in identifying and fixing bugs during the testing phase. 
 
 Verified the correctness of results and ensured that no unexpected behavior occurred in the application. 
 
- Akor Gideon U23MTE1058(Security & Performance Analyst) 
+9. )  Akor Gideon U23MTE1058(Security & Performance Analyst) 
 
 Focused on improving the performance of the calculator application. 
 
@@ -96,7 +96,7 @@ Java 8: Programming language used to develop the application.
 
 Swing API: Used for building the graphical user interface (GUI). 
 
-AWT (Abstract Window Toolkit): Used for handling events and layout management.Prerequisites 
+AWT (Abstract Window Toolkit): Used for handling events and layout management Prerequisites 
 
 To run this application, ensure the following: 
 
@@ -106,55 +106,13 @@ A Java IDE such as IntelliJ IDEA, Eclipse, or NetBeans for compiling and running
 
 Installation and Setup 
 
-Clone the Repository: To get started, clone this repository to your local machine using the following command: 
-
-bash 
-
-Copy 
-
-git clone https://github.com/yourusername/calculator-java-swing.git 
- 
-
-Navigate to the project directory: 
-
-bash 
-
-Copy 
-
-cd calculator-java-swing 
- 
-
-Compile and Run: If you are using a terminal/command prompt: 
-
-Compile the Calculator.java file: 
-
-bash 
-
-Copy 
-
-javac Calculator.java 
- 
-
-Run the compiled Calculator class: 
-
-bash 
-
-Copy 
-
-java Calculator 
- 
-
-Alternatively, if you're using an IDE (e.g., IntelliJ IDEA or Eclipse), simply import the project and run the Calculator class. 
+using an IDE (e.g., IntelliJ IDEA or Eclipse), simply import the project and run the Calculator class. 
 
 Code Walkthrough 
 
 1. Frame Setup: 
 
 The JFrame class is used to create the main window of the application. The frame properties such as title, size, layout, and background color are set here. 
-
-java 
-
-Copy 
 
 setTitle("Calculator"); 
 setSize(1000, 1000); 
@@ -166,10 +124,6 @@ getContentPane().setBackground(Color.BLUE);
 2. Text Field: 
 
 A JTextField is used to display the current input or result. It is set as non-editable, so the user can only interact with it through the buttons. 
-
-java 
-
-Copy 
 
 textField = new JTextField(); 
 textField.setBounds(30, 25, 320, 50); 
@@ -183,10 +137,6 @@ add(textField);
 Number buttons (0-9) and operator buttons (+, -, *, /, %, =) are created using the JButton class. 
 
 Action listeners are added to these buttons to handle user input. 
-
-java 
-
-Copy 
 
 for (int i = 0; i < 10; i++) { 
     numberButtons[i] = new JButton(String.valueOf(i)); 
@@ -205,10 +155,6 @@ Numbers are added to the text field.
 
 Operators are stored and used to perform the respective calculation when the "=" button is pressed. 
 
-java 
-
-Copy 
-
 @Override 
 public void actionPerformed(ActionEvent e) { 
     if (e.getSource() == addButton) { 
@@ -224,10 +170,6 @@ public void actionPerformed(ActionEvent e) {
 
 The application handles division by zero and modulus by zero errors by displaying an error message in the text field. 
 
-java 
-
-Copy 
-
 if (num2 == 0) { 
     textField.setText("Error: Div by 0"); 
     return; 
@@ -240,10 +182,6 @@ Clear (C) resets the text field.
 
 Delete (DEL) removes the last character entered. 
 
-java 
-
-Copy 
-
 clrButton.addActionListener(this); 
 delButton.addActionListener(this); 
  
@@ -251,10 +189,6 @@ delButton.addActionListener(this);
 7. Main Method: 
 
 The main method creates an instance of the Calculator class to launch the application. 
-
-java 
-
-Copy 
 
 public static void main(String[] args) { 
     new Calculator(); 
@@ -287,8 +221,8 @@ Add keyboard support for better user experience.
 
 Acknowledgments 
 
-Swing API documentation for providing the necessary components for creating a graphical user interface in Java. 
+.Swing API documentation for providing the necessary components for creating a graphical user interface in Java. 
 
-Online tutorials and community resources for helping with Java Swing development. 
+.Online tutorials and community resources for helping with Java Swing development. 
 
-            Instructor William Rupert. 
+.Instructor William Rupert. 
