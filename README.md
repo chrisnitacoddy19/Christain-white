@@ -30,7 +30,7 @@ This project was developed and contributed to by a group of 10 individuals, each
 
 Group Members and Their Contributions: 
 
-ChristainU23MTE1059 (Project Manager) 
+Nureni olamilekan U23MTE1059 (Project Manager/developer) 
 
 Managed the overall project, coordinated tasks, and ensured timely delivery. 
 
